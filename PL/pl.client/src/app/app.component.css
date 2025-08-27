@@ -1,0 +1,14 @@
+﻿
+:host {
+  display: flex;
+  min-height: 100vh;     /* o 100dvh para móviles */
+  flex-direction: column;
+}
+
+.content {
+  flex: 1 0 auto;        /* ocupa el alto disponible */
+}
+
+app-footer {
+  margin-top: auto;      /* empuja el footer al fondo */
+}

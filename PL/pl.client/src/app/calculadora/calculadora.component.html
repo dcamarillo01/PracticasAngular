@@ -1,0 +1,53 @@
+<div class="container">
+    <div class="row">
+        <div class="col">
+        
+
+        <div class="row">
+            <div class="col">
+
+                <h1>Calculadora</h1>
+
+
+                <div class="row" style="padding-top: 20px; padding-bottom: 20px;" >
+                    <div class="col-4">
+                        <label class="form-label">Numero 1</label>
+                        <input class="form-control" type="text" (input)="Numero1($event)" />
+                    </div>
+                    <div class="col-4">
+                        <label class="form-label">Numero 2</label>
+                        <input class="form-control" type="text" (input)="Numero2($event)" />
+                    </div>
+                </div>
+            
+
+                
+                <div class="btn-group" role="group" aria-label="Basic example">
+                    <button class="btn btn-outline-primary" (click)="Sumar(numero1, numero2)">Sumar</button>
+                    <button class="btn btn-outline-primary" (click)="Restar(numero1, numero2)">Restar</button>
+                    <button class="btn btn-outline-primary" (click)="Multiplicar(numero1, numero2)">Multiplicar</button>
+                    <button class="btn btn-outline-primary" (click)="Dividir(numero1, numero2)">Dividir</button>
+                </div>
+
+                <h3>Resultado:</h3>
+                <h4 class="text-success">{{resultado}}</h4>
+
+
+               <input [(ngModel)]="userName" placeholder="Enter your name" />
+            <p>Hello, {{ userName }}!</p>
+
+
+            <h1>Calculadora con TwoWayBinding</h1>
+            <input type="number" [(ngModel)]="numeroTwoWayBinding1" placeholder="Ingresa el numero 1" />
+            <input type="number" [(ngModel)]="numeroTwoWayBinding2" placeholder="Ingresa el numero 2" />
+
+            <button class="btn btn-outline-primary" (click)="SumarTwoWayBinding()">Sumar</button>
+            
+            <h4 class="text-success">{{resultadoTwoWayBinding}}</h4>
+
+
+            </div>
+        </div>
+        </div>
+    </div>
+</div>
