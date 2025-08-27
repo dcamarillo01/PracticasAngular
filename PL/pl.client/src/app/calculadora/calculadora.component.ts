@@ -9,55 +9,47 @@ import { Calculadora } from '../../models/Calculadora';
 })
 export class CalculadoraComponent {
 
-  numero1! : number;
-  numero2! : number;
-  calculadora = new Calculadora(this.numero1, this.numero2);
+ 
+  // calculadora = new Calculadora(this.numero1, this.numero2);
   texto! : string;
-  resultado! : number;
-  userName: string = '';
-
   //two way binding
-  numeroTwoWayBinding1 : number = 0;
-  numeroTwoWayBinding2 : number = 0;
-  resultadoTwoWayBinding : number = 0;
+  numero1 : number = 0;
+  numero2 : number = 0;
+  resultado : number = 0;
   
 
   SumarTwoWayBinding(){
 
-    const numero1 = this.numeroTwoWayBinding1 ?? 0;
-    const numero2 = this.numeroTwoWayBinding2 ?? 0;
-    this.resultadoTwoWayBinding = numero1 + numero2;
+    const numero1 = this.numero1 ?? 0;
+    const numero2 = this.numero2 ?? 0;
+    this.resultado = numero1 + numero2;
 
   }
 
+  Restar(){
 
-  Sumar(numero1: number, numero2: number){
+    const numero1 = this.numero1 ?? 0;
+    const numero2 = this.numero2 ?? 0;
+    this.resultado = numero1 - numero2;
 
-    var resultado = numero1 + numero2;
-    this.resultado = resultado;
-
-  }
-
-    Restar(numero1: number, numero2: number){
-
-    var resultado = numero1 - numero2;
-    this.resultado = resultado;
 
   }
 
-    Multiplicar(numero1: number, numero2: number){
+  Multiplicar(){
 
-    var resultado = numero1 * numero2;
-    this.resultado = resultado;
-
+    const numero1 = this.numero1 ?? 0;
+    const numero2 = this.numero2 ?? 0;
+    this.resultado = numero1 * numero2;
   }
 
-    Dividir(numero1: number, numero2: number){
 
-    var resultado = numero1 / numero2;
-    this.resultado = resultado;
+  Dividir(){
 
+    const numero1 = this.numero1 ?? 0;
+    const numero2 = this.numero2 ?? 0;
+    this.resultado = numero1 / numero2;
   }
+  
 
   verValor(event : Event){
 
@@ -66,18 +58,7 @@ export class CalculadoraComponent {
     
   }
 
-  Numero1(event : Event){
-
-    var tag = event.target as HTMLInputElement;
-    this.numero1 = parseInt(tag.value);
-    
-  }
-  Numero2(event : Event){
-
-    var tag = event.target as HTMLInputElement;
-    this.numero2 = parseInt(tag.value);
-    
-  }
+  
 
   
  
