@@ -8,6 +8,8 @@ import { HeaderComponent } from './shared/header/header.component';
 import { FooterComponent } from './shared/footer/footer.component';
 import { CalculadoraComponent } from './calculadora/calculadora.component';
 import { FormsModule } from '@angular/forms';
+import { ChuckModule } from './chuck/chuck.module';
+
 
 @NgModule({
   declarations: [
@@ -18,7 +20,7 @@ import { FormsModule } from '@angular/forms';
   ],
   imports: [
     BrowserModule, HttpClientModule,
-    AppRoutingModule,FormsModule
+    AppRoutingModule,FormsModule, ChuckModule
   ],
   providers: [],
   bootstrap: [AppComponent]
