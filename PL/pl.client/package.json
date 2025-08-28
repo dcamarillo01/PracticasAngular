@@ -26,6 +26,7 @@
     "jquery": "^3.7.1",
     "run-script-os": "*",
     "rxjs": "~7.8.0",
+    "rxjs-compat": "^6.6.7",
     "tslib": "^2.3.0",
     "zone.js": "~0.15.0"
   },
