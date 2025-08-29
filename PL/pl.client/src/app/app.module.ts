@@ -9,6 +9,9 @@ import { FooterComponent } from './shared/footer/footer.component';
 import { CalculadoraComponent } from './calculadora/calculadora.component';
 import { FormsModule } from '@angular/forms';
 import { ChuckModule } from './chuck/chuck.module';
+import { RandompersonComponent } from './randomperson/componentes/randomperson/randomperson.component';
+import {MatButtonModule} from '@angular/material/button';
+import {MatCardModule} from '@angular/material/card';
 
 
 @NgModule({
@@ -17,10 +20,11 @@ import { ChuckModule } from './chuck/chuck.module';
     HeaderComponent,
     FooterComponent,
     CalculadoraComponent,
+    RandompersonComponent,
   ],
   imports: [
     BrowserModule, HttpClientModule,
-    AppRoutingModule,FormsModule, ChuckModule
+    AppRoutingModule,FormsModule, ChuckModule, MatButtonModule, MatCardModule
   ],
   providers: [],
   bootstrap: [AppComponent]
