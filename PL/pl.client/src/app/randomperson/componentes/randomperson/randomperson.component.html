@@ -1,0 +1,38 @@
+
+<div class="container">
+    <div class="row">
+        <div class="col">
+
+            <h1>Random Person</h1>
+
+            <div class="row">
+                <div class="col">
+                    <mat-card class="example-card" appearance="outlined">
+  <mat-card-header>
+    <div mat-card-avatar class="example-header-image" style="background-image: url('{{randomPerson.picture.large}}');"></div>
+    <mat-card-title>{{randomPerson.name.first}}</mat-card-title>
+    <mat-card-subtitle>{{randomPerson.name.last}}</mat-card-subtitle>
+  </mat-card-header>
+  <img mat-card-image src="{{randomPerson.picture.large}}" alt="Photo of a Shiba Inu">
+  <mat-card-content>
+    <p>Genero: {{randomPerson.gender}}</p>
+    <p> Email: {{randomPerson.email}}</p>
+    <p> Celular: {{randomPerson.phone}}</p>
+    <p> Direccion: Calle: {{randomPerson.location.street.name}} Ciudad: {{randomPerson.location.city}}</p>
+  </mat-card-content>
+  <mat-card-actions>
+    <button matButton class="btn btn-success">LIKE</button>
+    <button matButton class="btn btn-info">SHARE</button>
+  </mat-card-actions>
+</mat-card>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+

@@ -3,11 +3,13 @@ import { RouterModule, Routes } from '@angular/router';
 import { CalculadoraComponent} from '../app/calculadora/calculadora.component';
 import { AppComponent } from './app.component';
 import { VerfraseComponent} from './chuck/componentes/verfrase/verfrase.component';
+import {RandompersonComponent} from './randomperson/componentes/randomperson/randomperson.component';
 
 const routes: Routes = [
 
   {path: 'calculadora', component: CalculadoraComponent},
   {path: 'verfrase', component: VerfraseComponent},
+  {path: 'randomperson', component: RandompersonComponent},
   {path: '*', component: AppComponent}
 
 ];
