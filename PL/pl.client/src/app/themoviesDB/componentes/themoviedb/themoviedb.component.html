@@ -1,0 +1,63 @@
+<p>themoviedb works!</p>
+
+<h1>Cartas de Peliculas con MAP</h1>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Nombre</th>
+            <th></th>
+
+        </tr>
+    </thead>
+    <tbody *ngFor="let pelicula of peliculas">
+        <tr>
+            <td>{{pelicula.Titulo}}</td>
+            <td>{{pelicula.FechaLanzamiento}}</td>
+            <td>{{pelicula.Resumen}}</td>
+            <td><img style="width: 50px;" src="{{pelicula.PosterPath}}" alt=""/></td>
+        </tr>
+    </tbody>
+</table>
+
+
+
+<h1>Cartas de Peliculas sin MAP</h1>
+
+<div class="col" *ngFor="let movie of movies">
+    
+
+        <div class="movie_card" id="tomb">
+            <div class="info_section">
+                <div class="movie_header">
+                    <h1 hidden id="idMovie" name="modieID">movie.idMovie</h1>
+                    <img class="locandina" src="https://image.tmdb.org/t/p/w500/{{movie.poster_path}}" />
+                    <h1>{{movie.title}}</h1>
+                    <h4>{{movie.realese_date}}, David Ayer</h4>
+                    <span class="minutes">117 min</span>
+                    <p class="type">Action, Crime, Fantasy</p>
+                </div>
+                <div class="movie_desc">
+                    <p class="text">
+                        {{movie.overview}}
+                    </p>
+                </div>
+                <div class="movie_social">
+                    <div>
+                        <button class="btn" id="btnFavorite"><i id="heartId" class="bi bi-heart"></i></button>
+                        <button class="btn" id="btnRemove"><i id="heartId" class="bi bi-heartbreak-fill"></i></button>
+
+                    </div>
+                    <li><i class="bi bi-share-fill"></i></li>
+                        <button><i class="bi bi-heart"></i></button>
+                        <li><i class="bi bi-chat-left"></i></li>
+
+                </div>
+            </div>
+            <div class="blur_back " style="background:Url(https://image.tmdb.org/t/p/w500/{{movie.poster_path}})"></div>
+        </div>
+
+
+    
+
+</div>

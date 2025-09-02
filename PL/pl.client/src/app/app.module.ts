@@ -12,6 +12,7 @@ import { ChuckModule } from './chuck/chuck.module';
 import { RandompersonComponent } from './randomperson/componentes/randomperson/randomperson.component';
 import {MatButtonModule} from '@angular/material/button';
 import {MatCardModule} from '@angular/material/card';
+import { ThemoviedbComponent } from './themoviesDB/componentes/themoviedb/themoviedb.component';
 
 
 @NgModule({
@@ -21,6 +22,7 @@ import {MatCardModule} from '@angular/material/card';
     FooterComponent,
     CalculadoraComponent,
     RandompersonComponent,
+    ThemoviedbComponent,
   ],
   imports: [
     BrowserModule, HttpClientModule,
