@@ -2,6 +2,8 @@ import { Injectable } from '@angular/core';
 import { HttpClient , HttpHeaders} from '@angular/common/http';
 import { Observable , map} from 'rxjs';
 import {Result, Movie, MovieMap} from '../Modelos/movieDB';
+import {favorite} from '../Modelos/favorite';
+
 
 @Injectable({
   providedIn: 'root'
@@ -42,6 +44,21 @@ export class TheMovieDBApiService {
         }))
       )
     );
+  }
+
+  addFavorite(IdPelicula: number, favoriteBoolean: boolean): Observable<favorite> {
+
+    const headers = new HttpHeaders().set('Authorization', 'Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI5YzM3YjY0MGM5YjZkNDcyNTljMTczNmIzYjFmNjlhYiIsIm5iZiI6MTc1MDQ0MTUzNi4xMTIsInN1YiI6IjY4NTU5ZTQwZDdiNTVmMGZlZDI5MDY0NSIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.eLNLWvOpZ_kEBWa49wLK7uDGHwxBEqpZHZkeUk4BlnQ');
+    const url = 'https://api.themoviedb.org/3/account/22090518/favorite';
+    const body : favorite = {
+      media_id: IdPelicula ,
+      media_type: 'movie',
+      favorite: favoriteBoolean
+    }
+
+    return this.http.post<any>(url, body, {headers})
+
+
   }
   
 

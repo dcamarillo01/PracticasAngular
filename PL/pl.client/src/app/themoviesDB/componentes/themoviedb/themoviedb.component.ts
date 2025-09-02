@@ -37,12 +37,6 @@ export class ThemoviedbComponent implements OnInit {
 
   }
 
-  // getPopularMoviesMap(){
-
-  //     this.api.getPopularMoviesMap().subscribe(responseMovie => this.movieMap = responseMovie)
-  //     console.log(this.movieMap)
-  // }
-
   getPeliculasMap(){
 
     this.api.getPeliculas().subscribe(peliculas => {
@@ -50,12 +44,18 @@ export class ThemoviedbComponent implements OnInit {
   this.peliculas = peliculas;
   console.log(this.peliculas);
 
-  // [
-  //   { id: 755898, titulo: "War of the Worlds", fechaEstreno: "2025-07-29", ... },
-  //   { id: 911430, titulo: "F1", fechaEstreno: "2025-06-25", ... }
-  // ]
 });
+  }
 
+  addFavorite(event : Event){
+
+    // this.api.addFavorite().subscribe((data: Result) => {
+
+    //   console.log(data);
+      
+    // })
+    console.log(event);
+    
 
   }
 

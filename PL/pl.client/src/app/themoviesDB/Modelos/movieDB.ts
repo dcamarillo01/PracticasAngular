@@ -2,7 +2,7 @@
 // Interface que hace match con result de API.
 export interface Movie
 {
-
+    id: number;
     title: string;
     realese_date: string;
     overview: string;
