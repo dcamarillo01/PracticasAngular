@@ -1,13 +1,21 @@
-<p>themoviedb works!</p>
 
-<h1>Cartas de Peliculas con MAP</h1>
 
-<table class="table">
+
+
+<div class="container">
+    <div class="row">
+        <div class="col">
+    <h1 style="padding-bottom: 40px;">Cartas de Peliculas con MAP</h1>
+        
+        <div class="row">
+            <div class="col">
+                <table class="table">
     <thead>
         <tr>
             <th>Nombre</th>
-            <th></th>
-
+            <th>FechaLanzamiento</th>
+            <th>Sipnosis</th>
+            <th>Poster</th>
         </tr>
     </thead>
     <tbody *ngFor="let pelicula of peliculas">
@@ -20,12 +28,27 @@
     </tbody>
 </table>
 
+            </div>
+        </div>
+        </div>
+    </div>
+</div>
 
 
-<h1>Cartas de Peliculas sin MAP</h1>
 
-<div class="col" *ngFor="let movie of movies">
+
+
+
+<div class="container">
+    <div class="row">
+        <div class="col">
+<h1 style="padding-top: 20px;">Cartas de Peliculas sin MAP</h1>
     
+        
+        <div class="row">
+            <div class="col">
+                
+<div class="col" *ngFor="let movie of movies">
 
         <div class="movie_card" id="tomb">
             <div class="info_section">
@@ -61,3 +84,11 @@
     
 
 </div>
+
+
+            </div>
+        </div>
+        </div>
+    </div>
+</div>
+

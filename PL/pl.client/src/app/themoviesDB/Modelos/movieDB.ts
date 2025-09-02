@@ -1,4 +1,5 @@
 
+// Interface que hace match con result de API.
 export interface Movie
 {
 
@@ -10,6 +11,7 @@ export interface Movie
 
 }
 
+// Interface modificada. 
 export interface MovieMap
 {
 
